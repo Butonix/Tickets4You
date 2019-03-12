@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}Forbidden (403){% endblock %}
+
+{% block content %}
+<div class="container mx-4">
+  <div class="card p-t-200 p-b-200">
+    <h4 class="text-center text-primary">
+      {% trans 'Forbidden (403)' %}
+      <p class="fs-16 text-muted">
+        {% trans 'CSRF verification failed. Request aborted.' %}
+      </p>
+    </h4>
+  </div>
+</div>
+{% endblock content %}

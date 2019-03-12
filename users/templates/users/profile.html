@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ user.get_profile_name }}{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/hm.jpg' %});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+      <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+        <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{% url 'index' %}">Home</a></span> <span>Offers</span></p>
+        <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Profile</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="ftco-section" id="user_profile_area">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4">{{ user.get_profile_name }}'s Profile</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Departure</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Transport Type</th>
+              <th scope="col">Date</th>
+              <th scope="col">Cancel Now</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            {% for record in records %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ record.data.departure }}</td>
+              <td>{{ record.data.destination }}</td>
+              <td>{{ record.data.transport_type }}</td>
+              <td>{{ record.data.date }}</td>
+              <td>
+                {% if record.data.transport_type == "Bus" %}
+                  <a href="{{ record.cancelling_url }}">Click here</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="7">
+                <p class="font-weight-bold text-center m-4 p-4">No Booking Record Found!</p>
+              </td>
+            </tr>
+            {% endfor %}
+
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ftco-section-parallax">
+  <div class="parallax-img d-flex align-items-center">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <h2>SignUp To Avail The Best Offers</h2>
+          <p>SignUp now to avail the one of the most reliable platform's services and its offers.</p>
+          <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-8">
+              <form action="#" class="subscribe-form">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block js_content %}
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('html, body').animate({
+          scrollTop: $("#user_profile_area").offset().top
+      }, 1000);
+  });
+</script>
+
+{% endblock %}

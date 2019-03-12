@@ -1,0 +1,51 @@
+{% load static i18n %}
+{% load account startswith %}
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">
+      {% if not hide_navbar_brand %}
+        {% if navbar_brand_text %}
+          {{ navbar_brand_text }}
+        {% else %}
+          Tickets4You
+        {% endif %}
+      {% endif %}
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        {% if toggle_the_navbar %}
+
+        <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="places.html" class="nav-link">Places</a></li>
+        <li class="nav-item {% if request.path|startswith:'/hotels/' %}active{% endif %}"><a href="{% url 'hotels' %}" class="nav-link">Hotels</a></li>
+        <li class="nav-item {% if request.path|startswith:'/blog/' %}active{% endif %}"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+        <li class="nav-item {% if request.path|startswith:'/contact/' %}active{% endif %}"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+
+        {% else %}
+
+        <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="{% url 'index' %}" class="nav-link"><b>Home</b></a></li>
+        <li class="nav-item {% if request.path|startswith:'/offers/' %}active{% endif %}"><a href="{% url 'offers' %}" class="nav-link"><b>Offers</b></a></li>
+        <li class="nav-item {% if request.path|startswith:'/companies/' %}active{% endif %}"><a href="{% url 'companies' %}" class="nav-link"><b>Travelling Companies</b></a></li>
+        <li class="nav-item {% if request.path|startswith:'/feedback/' %}active{% endif %}"><a href="{% url 'feedback' %}" class="nav-link"><b>Feedback</b></a></li>
+
+        <li class="nav-item {% if request.path|startswith:'/contact/' %}active{% endif %}"><a href="{% url 'contact' %}" class="nav-link"><b>Contact Us</b></a></li>
+
+        {% if request.user.is_authenticated %}
+          <li class="nav-item {% if request.path|startswith:'/profile/' %}active{% endif %}"><a href="{% url 'users:profile' %}" class="nav-link"><b>Profile</b></a></li>
+          <li class="nav-item"><a href="{% url 'account_logout' %}" class="nav-link"><b>Logout</b></a></li>
+        {% else %}
+          <li class="nav-item"><a href="{% url 'account_signup' %}" class="nav-link"><b>Register</b></a></li>
+          <li class="nav-item"><a href="{% url 'account_login' %}" class="nav-link"><b>Login</b></a></li>
+        {% endif %}
+
+      {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

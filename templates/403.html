@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}Permission denied{% endblock %}
+
+{% block content %}
+<div class="container mx-4">
+  <div class="card p-t-200 p-b-200">
+    <h4 class="text-center text-primary">
+      {% trans 'Permission denied' %}
+      <p class="fs-16 text-muted">
+        {% trans 'Hey you! Seems like you do not have permission to access this page. Please let us know otherwise.' %}
+      </p>
+    </h4>
+  </div>
+</div>
+{% endblock content %}

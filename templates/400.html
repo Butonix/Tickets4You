@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}Bad request{% endblock %}
+
+{% block content %}
+<div class="container mx-4">
+  <div class="card p-t-200 p-b-200">
+    <h4 class="text-center text-primary">
+      {% trans 'Bad request' %}
+      <p class="fs-16 text-muted">
+        {% trans 'Hey you! My friend, it appears to me that you did something wrong.  :(' %}
+      </p>
+    </h4>
+  </div>
+</div>
+{% endblock content %}

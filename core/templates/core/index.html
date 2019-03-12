@@ -1,0 +1,726 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/hm.jpg' %});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+      <div class="col-md-9 ftco-animate mb-5 pb-5 text-center text-md-left" data-scrollax=" properties: { translateY: '70%' }">
+        <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">TICKETS4YOU</h1>
+        <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section justify-content-end ftco-search">
+  <div class="container-wrap ml-auto">
+    <div class="row no-gutters">
+      <div class="col-md-12 nav-link-wrap">
+        <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+
+
+        </div>
+      </div>
+      <div class="col-md-12 tab-wrap">
+
+        <div class="tab-content p-4 px-5" id="v-pills-tabContent">
+
+          <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+            {% include 'core/search_box.html' %}
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+            <form action="#" class="search-destination">
+              <div class="row">
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Check In</label>
+                    <div class="form-field">
+                      <div class="icon"><span class="icon-map-marker"></span></div>
+                      <input type="text" class="form-control checkin_date" placeholder="Check In">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Check Out</label>
+                    <div class="form-field">
+                      <div class="icon"><span class="icon-map-marker"></span></div>
+                      <input type="text" class="form-control checkout_date" placeholder="From">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Guest</label>
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                        <select name="" id="" class="form-control">
+                          <option value="">1</option>
+                          <option value="">2</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-self-end">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <input type="submit" value="Search" class="form-control btn btn-primary">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+            <form action="#" class="search-destination">
+              <div class="row">
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Where</label>
+                    <div class="form-field">
+                      <div class="icon"><span class="icon-map-marker"></span></div>
+                      <input type="text" class="form-control" placeholder="Where">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Check In</label>
+                    <div class="form-field">
+                      <div class="icon"><span class="icon-map-marker"></span></div>
+                      <input type="text" class="form-control checkin_date" placeholder="Check In">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-items-end">
+                  <div class="form-group">
+                    <label for="#">Check Out</label>
+                    <div class="form-field">
+                      <div class="icon"><span class="icon-map-marker"></span></div>
+                      <input type="text" class="form-control checkout_date" placeholder="From">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md align-self-end">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <input type="submit" value="Search" class="form-control btn btn-primary">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4">Most Popular Destination</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/lhr.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Lahore</a></h3>
+
+              </div>
+
+            </div>
+            <p>The most iconic, historical, the province of Punjab which makes every person to visit once in his life.</p>
+
+            <hr>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/isb.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Islamabad</a></h3>
+
+              </div>
+
+            </div>
+            <p>The Capital of Pakistan and its beauty makes everone a dream visit for the travellers.</p>
+
+            <hr>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/krchi.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Karachi</a></h3>
+
+              </div>
+
+            </div>
+            <p>Karachi the biggest city of Pakistan known as city of lights and its ocean beach and other iconic palces like tomb of Quaid-e-Azam..</p>
+
+            <hr>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/peshawar.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Peshawar</a></h3>
+
+              </div>
+
+            </div>
+            <p>Peshawar one of the oldest city and famous for its foods every traveller must go there.</p>
+
+            <hr>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="100000">0</strong>
+                <span>Happy Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="100">0</strong>
+                <span>Destination Places</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Companies</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="10000">0</strong>
+                <span>Daily Reservation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4"><strong>Popular Northern Areas Destinatios</strong></h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/hunza.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Hunza</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+
+                </p>
+              </div>
+
+            </div>
+            <p>Hunza is one of the most beautiful places to visit in Pakistan. Famous for its beauty and attractive places. A must visit for the nature lover.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/AK.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Azad Kashmir</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+
+                </p>
+              </div>
+
+            </div>
+            <p>Azad Kashmir is a very beautiful palce to be visited. For its famous ever green beauty and the valleys for which its called a heaven on Earth.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/skardu.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Skardu</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+
+                </p>
+              </div>
+
+            </div>
+            <p>Skardu is one of the most iconic cities in Pakistan. Either its winter or summer it makes itself a must visit place.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/murree.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Murree</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star-o"></i>
+
+                </p>
+              </div>
+
+            </div>
+            <p>The most visited area in Pakistan by the travellers. Muree has the beauty and its famous roads and location why not go there? </p>    						<hr>
+            <p class="bottom-area d-flex">
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm col-md-6 col-lg ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/neelum.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <div class="d-flex">
+              <div class="one">
+                <h3><a href="#">Neelum Valley</a></h3>
+                <p class="rate">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+
+                </p>
+              </div>
+
+            </div>
+            <p>A part of the Azad Kashmir. Neelum valley is most beautiful place and it has to be visited once in lifetime.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section testimony-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+        <h2 class="mb-4">Our satisfied customer says</h2>
+
+      </div>
+    </div>
+    <div class="row ftco-animate">
+      <div class="col-md-12">
+        <div class="carousel-testimony owl-carousel ftco-owl">
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/waseem.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-5">A really beautiful managed website through which i have reserved my tickets many times and have always found comfortable with precision.</p>
+                <p class="name">Waseem Abbas</p>
+                <span class="position">Web Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/aqib.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-5">I will must say that if you are a traveller and want to visit places in Pakistan reserve your ticket from TICKETS4YOU and be tension free.</p>
+                <p class="name">Aqib Raza</p>
+                <span class="position">Python Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/alee.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-5">A really cooperative and user friendly environment if you are going to reserve tickets and want precision be a visitor of TICKETS4YOU.</p>
+                <p class="name">Alee Idrees</p>
+                <span class="position">Front End Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/aman.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-5">TICKETS4YOU is a really great platform to reserve the tickets of every transportation type which gives every aspect to compare tickets.</p>
+                <p class="name">AmanUllah</p>
+                <span class="position">Android Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimony-wrap p-4 pb-5">
+              <div class="user-img mb-5" style="background-image: url({% static 'images/n1.jpg' %})">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-5">Its a real great platform for travellers in Pakistan to access every offer and be the first to reserve in a managed way.</p>
+                <p class="name">Naeem Ullah</p>
+                <span class="position">System Analyst</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2 class="mb-4">Recommended Companies</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/dae.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <h3><a href="#">Daewoo Express</a></h3>
+            <p class="rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+
+            </p>
+            <p>Daewoo Express is one of the most reliable and secure service if you are going to visit Pakistan via bus also its the reliable and time saving.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/bilal.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <h3><a href="#">Bilal Daewoo</a></h3>
+            <p class="rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+
+            </p>
+            <p>Bilal Daewoo is the latest bus service in Pakistan and due to its comfortable and services makes it the perfect travelling source.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="destination">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/PIA.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <h3><a href="#">PIA</a></h3>
+            <p class="rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star-o"></i>
+
+            </p>
+            <p>PIA is the oldest and Government owned airline service which makes it a reliable source to travel in economic way.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="destination d-md-flex flex-column-reverse">
+          <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url({% static 'images/pr.jpg' %});">
+            <div class="icon d-flex justify-content-center align-items-center">
+              <span class="icon-link"></span>
+            </div>
+          </a>
+          <div class="text p-3">
+            <h3><a href="#">Pakistan Railways</a></h3>
+            <p class="rate">
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star"></i>
+              <i class="icon-star-o"></i>
+
+            </p>
+            <p>Pakistan Railways is the very economic and reliable source to travel in pakistan cities.</p>
+            <hr>
+            <p class="bottom-area d-flex">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2><strong>Articles On Pakistan Travel</strong></h2>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_1.jpg' %});">
+          </a>
+          <div class="text">
+            <span class="tag">Tips, Travel</span>
+            <h3 class="heading mt-3"><a href="#">8 Best places in Pakistan that you don't miss out</a></h3>
+            <div class="meta mb-3">
+              <div><a href="#">October 3, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_2.jpg' %});">
+          </a>
+          <div class="text">
+            <span class="tag">Culture</span>
+            <h3 class="heading mt-3"><a href="#">The beauty of Pakistan's culture.</a></h3>
+            <div class="meta mb-3">
+              <div><a href="#">October 3, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="blog-single.html" class="block-20" style="background-image: url({% static 'images/image_3.jpg' %});">
+          </a>
+          <div class="text">
+            <span class="tag">History and places of Pakistan</span>
+            <h3 class="heading mt-3"><a href="#">The must visit places related to history.</a></h3>
+            <div class="meta mb-3">
+              <div><a href="#">October 3, 2018</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section-parallax">
+  <div class="parallax-img d-flex align-items-center">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <h2>SignUp To Avail The Best Offers</h2>
+          <p>SignUp now to avail the one of the most reliable platform's services and its offers.</p>
+          <div class="row d-flex justify-content-center mt-5">
+            <div class="col-md-8">
+              <form action="#" class="subscribe-form">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
